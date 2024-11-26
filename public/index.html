@@ -135,7 +135,7 @@
                         <p
                             class="font-normal text-[8px] md:text-sm leading-[10px] md:leading-5 text-[#050505] mb-1.5 md:mb-3">
                             Сегодня ждет много иронии и неожиданных поворотов. Примите это с
-                            юмором:  судьба любит подшутить!
+                            юмором: судьба любит подшутить!
                         </p>
                         <a href="#"
                             class="flex justify-center items-center gap-1.5 font-medium text-xs md:text-lg md:leading-5 leading-[14px] text-[#999999]">Подробнее
@@ -337,23 +337,42 @@
     </section>
     <!-- forecast end -->
 
-    <section class="pt-[30px] pb-[120px]">
-        <div class="max-w-[1124px] mx-auto px-5">
+    <section class="pt-5 lg:pt-[30px] pb-[60px] md:pb-[120px]">
+        <form action="#" class="max-w-[1124px] mx-auto px-5">
             <h2
-                class="font-bold text-[28px] md:text-5xl lg:text-6xl leading-[33.6px] lg:leading-[72px] md:leading-[57.6px] text-center mg-3 md:mb-4 lg:mb-6">
+                class="font-bold text-xl md:text-4xl lg:text-5xl leading-6 lg:leading-[72px] md:leading-[43.2px] text-center mb-6 md:mb-9 lg:mb-11">
                 Введите вашу дату рождения
-                <div>
-                    <input type="number" class="utilities" oninput="limitInput(this)" />
-
-                    <select id="theme-selector"
-                        class="max-w-[131px] md:max-w-[162px] block w-full p-3 lg:px-4 lg:p-3 mb-6 text-[#121212] border rounded-lg bg-white cursor-pointer border-[#0505053D] font-semibold text-xs lg:text-base leading-5">
-                        <option value="light">Светлая тема</option>
-                        <option value="dark">Темная тема</option>
-                    </select>
-                    <input type="number" class="utilities" maxlength="4" />
-                    
-                </div>
             </h2>
+            <div class="flex justify-center gap-2 mb-6 md:mb-9 md:mb-[42px]">
+                <input required type="number" class="utilities py-4 px-6 w-[72px] md:w-[123px] text-center font-medium text-xs md:text-2xl leading-[
+                14.4px] md:leading-7 placeholder:text-[#99999999] text-[#050505] rounded-xl" placeholder="Число" oninput="limitInput(this)" />
+
+                <select required 
+                    class="max-w-[131px] md:max-w-[195px] block w-full p-3 md:py-3 lg:py-4 md:pl-[18px] lg:pl-8 lg:pr-5  border rounded-lg bg-white cursor-pointer border-[#0505053D] font-semibold text-xs md:text-2xl leading-5 text-center   placeholder:text-[#1c1b1b99] text-[#99999999] ">
+                    <option class="text-xs md:text-2xl font-normal leading-7 text-[#050505] text-left" disabled selected value="light">Месяц</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Январь</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Февраль</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Март</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Апрель</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Май</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Июнь</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Июль</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Август</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Сентябрь</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Октябрь</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Ноябрь</option>
+                    <option  class="text-xs md:text-2xl font-normal leading-7 text-[#99999999] text-left" value="dark">Декабрь</option>
+                </select>
+                <input required type="number" class="utilities md:py-3 lg:py-4 px-6 w-[72px] md:w-[123px] text-center font-medium text-xs md:text-2xl leading-7 placeholder:text-[#99999999] text-[#050505] rounded-xl" placeholder="Год" oninput="limitInputYear(this)"  />
+                
+            </div>
+            <div class="flex-col md:flex-row items-center justify-center gap-x-6 flex">
+                <button
+                    class="bg-[#050505] border-[#050505] border md:rounded-lg rounded-md lg:rounded-xl font-semibold md:text-lg lg:text-2xl leading-4 lg:leading-7 text-white hover:opacity-80 md:mb-0 mb-3 md:p-[16px] lg:p-6 p-4">
+                    Узнать свой прогноз
+                </button>
+           
+            </div>
         </div>
     </section>
 

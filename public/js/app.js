@@ -32,3 +32,9 @@ function limitInput(input) {
         input.value = input.value.slice(0, 2); // Faqat birinchi 2 raqamni qoldiradi
     }
 }
+
+function limitInputYear(input) {
+    if (input.value.length > 4) {
+        input.value = input.value.slice(0, 4); // Faqat birinchi 2 raqamni qoldiradi
+    }
+}
