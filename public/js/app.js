@@ -25,3 +25,10 @@ themeSelector.addEventListener('change', (event) => {
 
 // Sayt yuklanganda mavzuni o'qish
 loadTheme();
+
+
+function limitInput(input) {
+    if (input.value.length > 2) {
+        input.value = input.value.slice(0, 2); // Faqat birinchi 2 raqamni qoldiradi
+    }
+}
