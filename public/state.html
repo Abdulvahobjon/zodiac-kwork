@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="dark:bg-black">
+    <!-- header start -->
+    <header class="py-7 md:py-8 lg:py-7">
+        <div class="max-w-[1240px] mx-auto px-5 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-[3px] text-[#050505] dark:text-white">
+                <span class="font-bold lg:text-2xl md:text-xl text-lg leading-6 md:leading-[28px]">zodiac</span>
+
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.28564 10.163L6.51575 10.2126C6.57834 10.2138 6.63961 10.2309 6.69382 10.2622C6.74804 10.2935 6.79343 10.338 6.82576 10.3916L9.48378 14.8962C9.52463 14.9644 9.58657 15.0174 9.66023 15.0472C9.73389 15.077 9.81525 15.082 9.892 15.0614C9.96875 15.0408 10.0367 14.9958 10.0856 14.9332C10.1345 14.8706 10.1616 14.7937 10.1629 14.7143L10.2125 9.48415C10.2137 9.42156 10.2308 9.36029 10.2621 9.30608C10.2934 9.25186 10.3379 9.20647 10.3915 9.17413L14.8961 6.51612C14.9643 6.47527 15.0173 6.41332 15.0471 6.33967C15.0769 6.26601 15.0819 6.18465 15.0613 6.1079C15.0407 6.03115 14.9957 5.96319 14.9331 5.9143C14.8705 5.86541 14.7936 5.83826 14.7142 5.83696L9.48404 5.78736C9.42145 5.78616 9.36019 5.76911 9.30597 5.73781C9.25176 5.70651 9.20636 5.66198 9.17403 5.60837L6.51602 1.10376C6.47517 1.03561 6.41322 0.982625 6.33957 0.952823C6.26591 0.92302 6.18455 0.918024 6.1078 0.938589C6.03105 0.959154 5.96309 1.00416 5.9142 1.0668C5.86531 1.12944 5.83816 1.2063 5.83685 1.28574L5.78725 6.51585C5.78606 6.57844 5.76901 6.63971 5.73771 6.69392C5.70641 6.74814 5.66187 6.79354 5.60827 6.82587L1.10366 9.48388C1.03551 9.52473 0.982523 9.58668 0.95272 9.66033C0.922918 9.73399 0.917921 9.81535 0.938486 9.8921C0.959051 9.96885 1.00406 10.0368 1.0667 10.0857C1.12933 10.1346 1.20619 10.1617 1.28564 10.163Z"
+                        fill="currentColor" stroke="#050505" stroke-width="0.125" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+            <ul class="hidden md:flex gap-6 lg:gap-11">
+                <li>
+                    <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+                        href="index.html">Главная</a>
+                </li>
+                <li>
+                    <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+                        href="forecast.html">Прогнозы</a>
+                </li>
+                <li>
+                    <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+                        href="compatibility.html">Совместимость</a>
+                </li>
+                <li>
+                    <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+                        href="numerologyJs.html">Нумерология</a>
+                </li>
+                <li>
+                    <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+                        href="state.html">Блог</a>
+                </li>
+            </ul>
+
+            <a href="#"
+                class="hidden md:block dark:bg-white bg-[#050505] hover:opacity-80 rounded-lg font-semibold md:text-xs lg:text-base leading-[14px] lg:leading-6 dark:text-[#050505] text-white py-3 px-4">Подписаться</a>
+
+            <button class="flex md:hidden cursor-pointer">
+                <svg class="text-[#DFDFDF] dark:text-white" width="24" height="14" viewBox="0 0 24 14"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 1H24M0 7H24M0 13H24" stroke="currentColor" stroke-width="2" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <!-- header end -->
+    <section class="pt-[46px] pb-3 md:pt-[60px] md:pb-[21px] px-5">
+        <div
+            class="max-w-[1200px] h-[320px] md:h-[448px] lg:h-[598px] rounded-2xl md:rounded-3xl mx-auto bg-[#EEEEEE] text-right">
+            <button class="font-medium text-[10px] md:text-sm lg:text-lg leading-[13px] md:leading-5 lg:leading-6 hover:bg-[#050505] hover:text-white ease-in duration-300 border-2 border-[#050505] rounded-md md:rounded-lg lg:rounded-xl py-2 md:py-3 lg:py-4 px-3 md:px-4 lg:px-6 mt-6 md:mt-9 lg:mt-12 mr-6
+                md:mr-9 lg:mr-12 dark:text-white dark:border-white">Астрология</button>
+        </div>
+    </section>
+    <section class="py-3 md:pt-[21px] md:pb-[18px] lg:py-[30px] px-5">
+        <div class="max-w-[996px] text-center mx-auto">
+            <h1
+                class="font-bold text-2xl md:text-4xl lg:text-5xl leading-7 md:leading-[43px] lg:leading-[57px] text-[#050505] mb-6 md:mb-9 lg:mb-[42px] dark:text-white">
+                Таинства Зодиака: <br class="block md:hidden">
+                как знаки влияют <br> на вашу личность</h1>
+            <p
+                class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] text-justify mb-4 md:mb-6 lg:mb-[60px] dark:text-white">
+                <span class="font-semibold">Астрология</span> — это древняя наука, изучающая влияние небесных тел на
+                жизнь на Земле. Одним из самых
+                увлекательных аспектов астрологии является зодиак, который насчитывает двенадцать знаков, каждый из
+                которых обладает уникальными характеристиками и влиянием на личность человека. В этой статье мы
+                рассмотрим, как знаки зодиака формируют наши личностные черты, поведение и даже жизненные выборы.
+            </p>
+            <h4
+                class="font-medium text-base md:text-2xl lg:text-4xl leading-5 md:leading-8 lg:leading-[48px] text-[#050505] mb-6 md:mb-9 lg:mb-[60px] dark:text-white">
+                "Зодиак — это большая книга, написанная звездами. Каждый знак — это страница, описывающая
+                отдельный аспект нашей личности."</h4>
+            <div class="border-t border-[#99999999] pt-3 md:text-lg lg:text-2xl">
+                <h5
+                    class="font-semibold text-lg md:text-4xl leading-6 md:leading-[48px] mb-4 md:mb-6 lg:mb-[42px] dark:text-white">
+                    Огонь, Земля, Воздух и Вода: Элементы Зодиака</h5>
+                <p
+                    class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] text-justify mb-3 md:mb-4 lg:mb-6 dark:text-white">
+                    Все знаки зодиака делятся на четыре элемента — огонь, земля, воздух и вода. <br
+                        class="lg:block hidden"> Каждый элемент придает
+                    своим знакам определенные качества:
+                </p>
+                <ul class="text-justify">
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Огненные знаки (Овен, Лев, Стрелец):</span> Эти люди обычно
+                        энергичны, страстны и активны.
+                        Они стремятся к новым впечатлениям и легко заводят знакомства.
+                    </li> <br class="md:block hidden">
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Земляные знаки (Телец, Дева, Козерог):</span> Практичные и
+                        реалистичные личности. Они ценят
+                        стабильность, надежность и физическую безопасность.
+                    </li> <br class="md:block hidden">
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Воздушные знаки (Близнецы, Весы, Водолей):</span> Эти знаки
+                        характеризуются интеллектом и
+                        общительностью. Они любят делиться идеями и наслаждаются социальными взаимодействиями.
+                    </li> <br class="md:block hidden">
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Водные
+                            знаки (Рак, Скорпион, Рыбы):</span>Эмоционально глубокие и интуитивные личности. Они часто
+                        чувствуют
+                        настроение окружающих и обострены к эмоциям.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="pt-[46px] pb-3 md:pt-[60px] md:pb-[21px] px-5">
+        <div
+            class="max-w-[1200px] h-[320px] md:h-[448px] lg:h-[598px] rounded-2xl md:rounded-3xl mx-auto bg-[#EEEEEE] text-right">
+        </div>
+    </section>
+    <section class="py-[30px] px-5">
+        <div class="max-w-[996px] text-center mx-auto">
+            <h3
+                class="font-medium text-base md:text-2xl lg:text-4xl leading-5 md:leading-8 lg:leading-[48px] mb-6 md:mb-9 lg:mb-[60px] dark:text-white">
+                "Элементы зодиака — как краски на палитре художника. Они создают уникальную комбинацию,
+                образующую окончательное произведение искусства — вашу личность."</h3>
+            <div class="border-t-2 border-[#99999999] pt-3 md:text-lg lg:text-2xl">
+                <h5
+                    class="font-semibold text-lg md:text-4xl leading-6 md:leading-[48px] mb-4 md:mb-6 lg:mb-[42px] dark:text-white">
+                    Характеристики Каждого Знака
+                </h5>
+                <p
+                    class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] text-justify mb-3 md:mb-4 lg:mb-6 dark:text-white">
+                    Каждый из двенадцати знаков зодиака обладает своими <br class="md:hidden block"> специфическими <br
+                        class="lg:block hidden">
+                    чертами:
+                </p>
+                <ul class="text-justify mb-6 md:mb-9 lg:mb-[60px]">
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Овен:</span> Лидеры по натуре, решительные и целеустремленные.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Телец:</span> Упорные, преданные и стремящиеся к комфорту.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Близнецы:</span> Любознательные,
+                        изменчивые и общительные.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Рак:</span> Чувствительные, заботливые и привязанные к дому.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Лев:</span> Харизматичные, щедрые и стремящиеся к признанию.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Дева:</span> Аналитичные, организованные и внимательные к деталям.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Весы:</span> Уравновешенные, ценящие гармонию и сотрудничество.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Скорпион:</span> Интенсивные, страстные и мистические.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Стрелец:</span> Оптимистичные, независимые и путешествующие натуры.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Козерог:</span> Амбициозные, дисциплинированные и ориентированные на
+                        результат.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Водолей:</span> Оригинальные, гуманистичные и свободолюбивые.
+                    </li>
+                    <li
+                        class="text-[10px] md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] list-disc ml-5 dark:text-white">
+                        <span class="font-semibold">Рыбы:</span> Творческие, мечтательные и сочувствующие.
+                    </li>
+                </ul>
+            </div>
+            <div class="border-t-2 border-[#99999999] pt-3 md:text-lg lg:text-2xl mb-6 md:mb-9 lg:mb-[60px]">
+                <h5
+                    class="font-semibold text-lg md:text-4xl leading-6 md:leading-[48px] mb-4 md:mb-6 lg:mb-[42px] dark:text-white">
+                    Применение Астрологии <br class="md:hidden block"> в Самопознании
+                </h5>
+                <p
+                    class="text-xs md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] mb-4 md:mb-9 lg:mb-[60px] dark:text-white">
+                    Знание о своем знаком зодиака может помочь понять свои внутренние мотивы и предрасположенности.
+                    Понимая свои сильные и слабые стороны, вы можете лучше управлять своими реакциями, строить здоровые
+                    отношения и выбирать правильные пути в жизни. Например, если вы знака Льва, возможно, вам лучше
+                    всего подойдет карьера, где можно проявлять креативность и получать признание, в то время как
+                    представитель Тельца может найти свое призвание в стабильной и финансово безопасной сфере.
+                </p>
+                <div class="border-2 border-[#050505] rounded-lg py-2.5 px-3 md:p-[18px] lg:p-6">
+                    <p
+                        class="text-[10px] md:text-lg lg:text-2xl leading-[13px] md:leading-6 lg:leading-8 text-[#050505] text-justify dark:text-white">
+                        <span class="font-semibold">Совет:</span> Подумайте о своих чертах и о том, как они могут помочь
+                        вам в жизни, отношениях и
+                        карьере. В конце концов, понимание своей личности — это один из самых важных шагов на пути к
+                        самореализации.
+                    </p>
+                </div>
+            </div>
+            <div class="border-t-2 border-[#99999999] pt-3 md:text-lg lg:text-2xl">
+                <h5
+                    class="font-semibold text-lg md:text-4xl leading-6 md:leading-[48px] mb-4 md:mb-6 lg:mb-[42px] dark:text-white">
+                    Заключение
+                </h5>
+                <p
+                    class="text-xs md:text-lg lg:text-2xl leading-4 md:leading-6 lg:leading-8 text-[#050505] text-justify dark:text-white">
+                    Знаки зодиака — это не просто метки, а ключи к пониманию своей личности и других людей. Астрология
+                    предлагает уникальную перспективу на то, как небесные тела могут влиять на наше внутреннее "я".
+                    Изучая особенности своего знака, вы получите возможность углубить самопознание и использовать это
+                    знание для построения более гармоничной жизни.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="pt-6 pb-[60px] md:pt-[21px] lg:pt-[30px] md:pb-[120px] px-5">
+        <div
+            class="max-w-[1200px] h-[320px] md:h-[448px] lg:h-[598px] rounded-2xl md:rounded-3xl mx-auto bg-[#EEEEEE] text-right">
+        </div>
+    </section>
+    <!-- footer start -->
+    <footer
+        class="border-t-2 dark:border-[#FFFFFF3D] border-[#0505053D] pt-7 md:pt-[50px] lg:pt-[60px] lg:pb-[78px] pb-[60px] mt-auto">
+        <div class="max-w-[1240px] mx-auto px-5">
+            <div class="flex items-start md:items-center justify-between mb-9 md:mb-5 lg:mb-[42px]">
+                <a href="#" class="flex items-center gap-[3px] text-[#050505] dark:text-white">
+                    <span class="font-bold lg:text-2xl md:text-xl text-lg leading-6 md:leading-[28px]">zodiac</span>
+
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.28564 10.163L6.51575 10.2126C6.57834 10.2138 6.63961 10.2309 6.69382 10.2622C6.74804 10.2935 6.79343 10.338 6.82576 10.3916L9.48378 14.8962C9.52463 14.9644 9.58657 15.0174 9.66023 15.0472C9.73389 15.077 9.81525 15.082 9.892 15.0614C9.96875 15.0408 10.0367 14.9958 10.0856 14.9332C10.1345 14.8706 10.1616 14.7937 10.1629 14.7143L10.2125 9.48415C10.2137 9.42156 10.2308 9.36029 10.2621 9.30608C10.2934 9.25186 10.3379 9.20647 10.3915 9.17413L14.8961 6.51612C14.9643 6.47527 15.0173 6.41332 15.0471 6.33967C15.0769 6.26601 15.0819 6.18465 15.0613 6.1079C15.0407 6.03115 14.9957 5.96319 14.9331 5.9143C14.8705 5.86541 14.7936 5.83826 14.7142 5.83696L9.48404 5.78736C9.42145 5.78616 9.36019 5.76911 9.30597 5.73781C9.25176 5.70651 9.20636 5.66198 9.17403 5.60837L6.51602 1.10376C6.47517 1.03561 6.41322 0.982625 6.33957 0.952823C6.26591 0.92302 6.18455 0.918024 6.1078 0.938589C6.03105 0.959154 5.96309 1.00416 5.9142 1.0668C5.86531 1.12944 5.83816 1.2063 5.83685 1.28574L5.78725 6.51585C5.78606 6.57844 5.76901 6.63971 5.73771 6.69392C5.70641 6.74814 5.66187 6.79354 5.60827 6.82587L1.10366 9.48388C1.03551 9.52473 0.982523 9.58668 0.95272 9.66033C0.922918 9.73399 0.917921 9.81535 0.938486 9.8921C0.959051 9.96885 1.00406 10.0368 1.0667 10.0857C1.12933 10.1346 1.20619 10.1617 1.28564 10.163Z"
+                            fill="currentColor" stroke="#050505" stroke-width="0.125" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+
+                <ul
+                    class="flex flex-col md:flex-row gap-3 md:gap-6 lg:gap-11 mb-auto lg:translate-y-0 md:-translate-y-full">
+                    <li>
+                        <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+                            href="index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+                            href="forecast.html">Прогнозы</a>
+                    </li>
+                    <li>
+                        <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+                            href="compatibility.html">Совместимость</a>
+                    </li>
+                    <li>
+                        <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+                            href="numerologyJs.html">Нумерология</a>
+                    </li>
+                    <li>
+                        <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+                            href="#">Блог</a>
+                    </li>
+                </ul>
+
+                <a href="#"
+                    class="block dark:bg-white bg-[#050505] hover:opacity-80 rounded-lg font-semibold text-xs lg:text-base leading-[14px] lg:leading-6 dark:text-[#050505] text-white py-3 px-4">Подписаться</a>
+            </div>
+            <div class="flex justify-center items-center mb-[42px] md:mb-[60px] lg:mb-[120px]">
+                <select id="theme-selector"
+                    class="max-w-[131px] md:max-w-[162px] block w-full p-3 lg:px-4 lg:p-3 mb-6 text-[#121212] border rounded-lg bg-white cursor-pointer border-[#0505053D] font-semibold text-xs lg:text-base leading-5">
+                    <option value="light">Светлая тема</option>
+                    <option value="dark">Темная тема</option>
+                </select>
+            </div>
+
+            <p class="text-center text-sm leading-5 dark:text-white text-[#050505]">
+                © 2024. Права защищены
+            </p>
+        </div>
+    </footer>
+
+    <!-- footer end  -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

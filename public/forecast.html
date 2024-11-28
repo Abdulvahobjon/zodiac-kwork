@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <style>
+    .hiddenTitle {
+      opacity: 0;
+      height: 0;
+      transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+      overflow: hidden;
+    }
+
+    .visibleTitle {
+      opacity: 1;
+      height: auto;
+      transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .active {
+      color: white !important;
+      background-color: #050505;
+      border-radius: 11px;
+      transition: color 0.5s ease-in-out;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .active {
+        color: #050505 !important;
+        background-color: white !important;
+        border-radius: 11px;
+        transition: color 0.5s ease-in-out;
+      }
+    }
+  </style>
+</head>
+
+<body class="dark:bg-[#050505] bg-white">
+  <!-- header start -->
+  <header class="py-7 md:py-8 lg:py-7">
+    <div class="max-w-[1240px] mx-auto px-5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-[3px] text-[#050505] dark:text-white">
+        <span class="font-bold lg:text-2xl md:text-xl text-lg leading-6 md:leading-[28px]">zodiac</span>
+
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.28564 10.163L6.51575 10.2126C6.57834 10.2138 6.63961 10.2309 6.69382 10.2622C6.74804 10.2935 6.79343 10.338 6.82576 10.3916L9.48378 14.8962C9.52463 14.9644 9.58657 15.0174 9.66023 15.0472C9.73389 15.077 9.81525 15.082 9.892 15.0614C9.96875 15.0408 10.0367 14.9958 10.0856 14.9332C10.1345 14.8706 10.1616 14.7937 10.1629 14.7143L10.2125 9.48415C10.2137 9.42156 10.2308 9.36029 10.2621 9.30608C10.2934 9.25186 10.3379 9.20647 10.3915 9.17413L14.8961 6.51612C14.9643 6.47527 15.0173 6.41332 15.0471 6.33967C15.0769 6.26601 15.0819 6.18465 15.0613 6.1079C15.0407 6.03115 14.9957 5.96319 14.9331 5.9143C14.8705 5.86541 14.7936 5.83826 14.7142 5.83696L9.48404 5.78736C9.42145 5.78616 9.36019 5.76911 9.30597 5.73781C9.25176 5.70651 9.20636 5.66198 9.17403 5.60837L6.51602 1.10376C6.47517 1.03561 6.41322 0.982625 6.33957 0.952823C6.26591 0.92302 6.18455 0.918024 6.1078 0.938589C6.03105 0.959154 5.96309 1.00416 5.9142 1.0668C5.86531 1.12944 5.83816 1.2063 5.83685 1.28574L5.78725 6.51585C5.78606 6.57844 5.76901 6.63971 5.73771 6.69392C5.70641 6.74814 5.66187 6.79354 5.60827 6.82587L1.10366 9.48388C1.03551 9.52473 0.982523 9.58668 0.95272 9.66033C0.922918 9.73399 0.917921 9.81535 0.938486 9.8921C0.959051 9.96885 1.00406 10.0368 1.0667 10.0857C1.12933 10.1346 1.20619 10.1617 1.28564 10.163Z"
+            fill="currentColor" stroke="#050505" stroke-width="0.125" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <ul class="hidden md:flex gap-6 lg:gap-11">
+        <li>
+          <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+            href="index.html">Главная</a>
+        </li>
+        <li>
+          <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+            href="forecast.html">Прогнозы</a>
+        </li>
+        <li>
+          <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+            href="compatibility.html">Совместимость</a>
+        </li>
+        <li>
+          <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+            href="numerologyJs.html">Нумерология</a>
+        </li>
+        <li>
+          <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+            href="state.html">Блог</a>
+        </li>
+      </ul>
+
+      <a href="#"
+        class="hidden md:block dark:bg-white bg-[#050505] hover:opacity-80 rounded-lg font-semibold md:text-xs lg:text-base leading-[14px] lg:leading-6 dark:text-[#050505] text-white py-3 px-4">Подписаться</a>
+
+      <button class="flex md:hidden cursor-pointer">
+        <svg class="text-[#DFDFDF] dark:text-white" width="24" height="14" viewBox="0 0 24 14" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 1H24M0 7H24M0 13H24" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <section class="pt-[60px] pb-[120px] px-5">
+    <div class="max-w-[1240px] mx-auto text-center">
+      <div class="">
+        <div
+          class="lg:mb-[67px] flex justify-center dark:text-white text-[#050505] md:mb-[42px] mb-10 lg:max-w-[185px] md:max-w-[161px] max-w-[114px] mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="185" height="190" viewBox="0 0 185 190" fill="none">
+            <path
+              d="M107.365 22.126C118.605 8.88695 129.768 3.30057 138.624 1.16958C143.014 0.113165 146.737 -0.0700442 149.49 0.020177C150.867 0.0652712 151.988 0.178301 152.807 0.279131C153.13 0.318944 153.416 0.358409 153.617 0.386001L153.741 0.402943L153.783 0.4087C160.379 0.484616 167.97 3.50622 173.916 8.40891C180.014 13.4366 185 20.9752 185 30.3507C185 38.3707 183.59 45.7079 179.534 51.822C175.431 58.0083 169.041 62.3142 160.322 65.053C157.687 65.8805 154.881 64.4157 154.053 61.7812C153.226 59.1466 154.691 56.3401 157.325 55.5126C164.488 53.2627 168.686 50.0856 171.201 46.2946C173.763 42.4312 175 37.2967 175 30.3507C175 24.7601 172.045 19.827 167.554 16.1245C162.989 12.36 157.463 10.4072 153.529 10.4072C153.059 10.4072 152.535 10.332 152.413 10.3146L152.392 10.3117L152.228 10.2892C152.031 10.2621 151.83 10.2344 151.583 10.2041C150.978 10.1295 150.166 10.0477 149.163 10.0148C147.159 9.94914 144.348 10.0777 140.963 10.8921C134.271 12.5026 124.925 16.8936 114.988 28.5979C108.101 36.7101 103.065 47.6534 99.7536 58.3899C96.4423 69.1265 95 79.1812 95 85.2262V185C95 187.761 92.7614 190 90 190C87.2386 190 85 187.761 85 185V85C85 78.9044 83.6315 68.7985 80.4994 58.0212C77.3649 47.236 72.6002 36.2541 66.0956 28.1234C56.7156 16.3984 47.9382 12.0535 41.7355 10.4695C38.5939 9.66728 35.9912 9.54207 34.143 9.60634C33.2178 9.63851 32.4679 9.71862 31.9086 9.79176C31.6804 9.82161 31.4948 9.84866 31.3092 9.87573L31.1517 9.89862L31.1381 9.90069C31.0404 9.91578 30.4952 9.99999 30 9.99999C26.4511 9.99999 21.3296 11.8867 17.0425 15.6379C12.8501 19.3063 10 24.2736 10 30C10 37.0055 11.1781 42.201 13.615 46.1C15.9883 49.8972 19.9137 53.0341 26.5811 55.2566C29.2009 56.1298 30.6167 58.9614 29.7434 61.5811C28.8702 64.2009 26.0386 65.6167 23.4189 64.7434C15.0863 61.9659 9.01174 57.6028 5.13501 51.4C1.32187 45.299 0 37.9945 0 30C0 20.7264 4.64994 13.1937 10.4575 8.11211C16.0873 3.18601 23.3344 0.0910016 29.7178 0.00196062L44.2097 0.780448C52.6919 2.9465 63.2844 8.60153 73.9043 21.8765C81.535 31.4149 86.7703 43.7663 90.1021 55.2305C90.1282 55.3204 90.1542 55.4102 90.1801 55.5001C90.186 55.4809 90.1919 55.4618 90.1978 55.4427C93.733 43.9801 99.2852 31.6428 107.365 22.126Z"
+              fill="currentColor" />
+          </svg>
+        </div>
+        <h1
+          class="text-[#050505] mb-9 text-[32px] leading-[38px] lg:text-[60px] lg:leading-[72px] md:mb-[42px] font-bold md:text-5xl md:leading-[57px] dark:text-white">
+          Овен
+        </h1>
+        <div
+          class="max-w-[996px] mx-auto md:pt-[18px] py-3 lg:pt-6 md:mb-[60px] mb-12 lg:mb-[84px] border-t-2 border-[#99999999]">
+          <div
+            class="inline-flex items-center border-2 border-[#050505] dark:border-white rounded-xl lg:mb-[42px] md:mb-9 mb-6">
+            <button id="activeBtn"
+              class="tab-btn active text-[#99999999] lg:text-[28px] md:text-2xl md:leading-7 lg:leading-8 text-sm leading-4 btn py-2.5 px-3 md:py-3 md:px-6"
+              data-index="0">
+              Сегодня
+            </button>
+            <button id="activeBtn"
+              class="tab-btn text-[#99999999] lg:text-[28px] md:text-2xl md:leading-7 lg:leading-8 text-sm leading-4 btn py-2.5 px-3 md:py-3 md:px-6"
+              data-index="1">
+              Неделя
+            </button>
+            <button id="activeBtn"
+              class="tab-btn text-[#99999999] lg:text-[28px] md:text-2xl md:leading-7 lg:leading-8 text-sm leading-4 btn py-2.5 px-3 md:py-3 md:px-6"
+              data-index="2">
+              Месяц
+            </button>
+            <button id="activeBtn"
+              class="tab-btn text-[#99999999] lg:text-[28px] md:text-2xl md:leading-7 lg:leading-8 text-sm leading-4 btn py-2.5 px-3 md:py-3 md:px-6"
+              data-index="3">
+              Год 2024
+            </button>
+          </div>
+          <div>
+            <p
+              class="lg:text-2xl md:text-lg text-[10px] lg:leading-8 md:leading-6 leading-3 text-justify text-[#050505] dark:text-white content">
+              У Овнов первая половина недели будет напряженной, с возможными
+              трудностями во взаимоотношениях с властями и законом. Если вы
+              водите автомобиль, увеличивается вероятность нарушений ПДД и
+              штрафов. Не лучшее время для судебных разбирательств, также
+              могут возникнуть проблемы в учебе и турпоездках.
+              <br /><br />Во второй половине недели ситуация значительно
+              улучшится. Поставленные планы будут выполняться с уверенностью.
+              Вы можете почувствовать интуитивное предвидение, и многие идеи
+              окажутся верными. Особенно успешно будут действовать те, кто
+              умеет избегать лишнего внимания и использовать тайную поддержку
+              влиятельных лиц.
+            </p>
+            <p
+              class="lg:text-2xl md:text-lg text-[10px] lg:leading-8 md:leading-6 leading-3 text-justify text-[#050505] dark:text-white content hiddenTitle">
+              У Овнов первая половина недели будет напряженной, с возможными
+              трудностями во взаимоотношениях с властями и законом. Если вы
+              водите автомобиль, увеличивается вероятность нарушений ПДД и
+              штрафов. Не лучшее время для судебных разбирательств, также
+              могут возникнуть проблемы в учебе и турпоездках.
+              <br /><br />Во второй половине недели ситуация значительно
+              улучшится. Поставленные планы будут выполняться с уверенностью.
+              Вы можете почувствовать интуитивное предвидение, и многие идеи
+              окажутся верными. Особенно успешно будут действовать те, кто
+              умеет избегать лишнего внимания и использовать тайную поддержку
+              влиятельных лиц.
+            </p>
+            <p
+              class="lg:text-2xl md:text-lg text-[10px] lg:leading-8 md:leading-6 leading-3 text-justify text-[#050505] dark:text-white content hiddenTitle">
+              У Овнов первая половина недели будет напряженной, с возможными
+              трудностями во взаимоотношениях с властями и законом. Если вы
+              водите автомобиль, увеличивается вероятность нарушений ПДД и
+              штрафов. Не лучшее время для судебных разбирательств, также
+              могут возникнуть проблемы в учебе и турпоездках.
+              <br /><br />Во второй половине недели ситуация значительно
+              улучшится. Поставленные планы будут выполняться с уверенностью.
+              Вы можете почувствовать интуитивное предвидение, и многие идеи
+              окажутся верными. Особенно успешно будут действовать те, кто
+              умеет избегать лишнего внимания и использовать тайную поддержку
+              влиятельных лиц.
+            </p>
+            <p
+              class="lg:text-2xl md:text-lg text-[10px] lg:leading-8 md:leading-6 leading-3 text-justify text-[#050505] dark:text-white content hiddenTitle">
+              У Овнов первая половина недели будет напряженной, с возможными
+              трудностями во взаимоотношениях с властями и законом. Если вы
+              водите автомобиль, увеличивается вероятность нарушений ПДД и
+              штрафов. Не лучшее время для судебных разбирательств, также
+              могут возникнуть проблемы в учебе и турпоездках.
+              <br /><br />Во второй половине недели ситуация значительно
+              улучшится. Поставленные планы будут выполняться с уверенностью.
+              Вы можете почувствовать интуитивное предвидение, и многие идеи
+              окажутся верными. Особенно успешно будут действовать те, кто
+              умеет избегать лишнего внимания и использовать тайную поддержку
+              влиятельных лиц.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            class="font-semibold lg:text-base md:text-sm text-[10px] lg:leading-5 md:leading-4 leading-3 text-[#999999] flex items-center md:gap-3 gap-2 m-1.5 lg:p-5 p-2.5 md:p-[18px] border-2 border-[#999999] rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+              <path d="M7.5 1.5L1.5 7.5L7.5 13.5" stroke="#999999" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Предыдущий знак
+          </button>
+          <button
+            class="font-semibold lg:text-base md:text-sm text-[10px] lg:leading-5 md:leading-4 leading-3 text-[#999999] flex items-center md:gap-3 gap-2 m-1.5 lg:p-5 p-2.5 md:p-[18px] border-2 border-[#999999] rounded-lg">
+            Следующий знак
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+              <path d="M1.5 13.5L7.5 7.5L1.5 1.5" stroke="#999999" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer start -->
+  <footer
+    class="border-t-2 dark:border-[#FFFFFF3D] border-[#0505053D] pt-7 md:pt-[50px] lg:pt-[60px] lg:pb-[78px] pb-[60px] mt-auto">
+    <div class="max-w-[1240px] mx-auto px-5">
+      <div class="flex items-start md:items-center justify-between mb-9 md:mb-5 lg:mb-[42px]">
+        <a href="#" class="flex items-center gap-[3px] text-[#050505] dark:text-white">
+          <span class="font-bold lg:text-2xl md:text-xl text-lg leading-6 md:leading-[28px]">zodiac</span>
+
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1.28564 10.163L6.51575 10.2126C6.57834 10.2138 6.63961 10.2309 6.69382 10.2622C6.74804 10.2935 6.79343 10.338 6.82576 10.3916L9.48378 14.8962C9.52463 14.9644 9.58657 15.0174 9.66023 15.0472C9.73389 15.077 9.81525 15.082 9.892 15.0614C9.96875 15.0408 10.0367 14.9958 10.0856 14.9332C10.1345 14.8706 10.1616 14.7937 10.1629 14.7143L10.2125 9.48415C10.2137 9.42156 10.2308 9.36029 10.2621 9.30608C10.2934 9.25186 10.3379 9.20647 10.3915 9.17413L14.8961 6.51612C14.9643 6.47527 15.0173 6.41332 15.0471 6.33967C15.0769 6.26601 15.0819 6.18465 15.0613 6.1079C15.0407 6.03115 14.9957 5.96319 14.9331 5.9143C14.8705 5.86541 14.7936 5.83826 14.7142 5.83696L9.48404 5.78736C9.42145 5.78616 9.36019 5.76911 9.30597 5.73781C9.25176 5.70651 9.20636 5.66198 9.17403 5.60837L6.51602 1.10376C6.47517 1.03561 6.41322 0.982625 6.33957 0.952823C6.26591 0.92302 6.18455 0.918024 6.1078 0.938589C6.03105 0.959154 5.96309 1.00416 5.9142 1.0668C5.86531 1.12944 5.83816 1.2063 5.83685 1.28574L5.78725 6.51585C5.78606 6.57844 5.76901 6.63971 5.73771 6.69392C5.70641 6.74814 5.66187 6.79354 5.60827 6.82587L1.10366 9.48388C1.03551 9.52473 0.982523 9.58668 0.95272 9.66033C0.922918 9.73399 0.917921 9.81535 0.938486 9.8921C0.959051 9.96885 1.00406 10.0368 1.0667 10.0857C1.12933 10.1346 1.20619 10.1617 1.28564 10.163Z"
+              fill="currentColor" stroke="#050505" stroke-width="0.125" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+
+        <ul class="flex flex-col md:flex-row gap-3 md:gap-6 lg:gap-11 mb-auto lg:translate-y-0 md:-translate-y-full">
+          <li>
+            <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+              href="index.html">Главная</a>
+          </li>
+          <li>
+            <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+              href="forecast.html">Прогнозы</a>
+          </li>
+          <li>
+            <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+              href="compatibility.html">Совместимость</a>
+          </li>
+          <li>
+            <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+              href="numerologyJs.html">Нумерология</a>
+          </li>
+          <li>
+            <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
+              href="blog.html">Блог</a>
+          </li>
+        </ul>
+
+        <a href="#"
+          class="block dark:bg-white bg-[#050505] hover:opacity-80 rounded-lg font-semibold text-xs lg:text-base leading-[14px] lg:leading-6 dark:text-[#050505] text-white py-3 px-4">Подписаться</a>
+      </div>
+      <div class="flex justify-center items-center mb-[42px] md:mb-[60px] lg:mb-[120px]">
+        <select id="theme-selector"
+          class="max-w-[131px] md:max-w-[162px] block w-full p-3 lg:px-4 lg:p-3 mb-6 text-[#121212] border rounded-lg bg-white cursor-pointer border-[#0505053D] font-semibold text-xs lg:text-base leading-5">
+          <option value="light">Светлая тема</option>
+          <option value="dark">Темная тема</option>
+        </select>
+      </div>
+
+      <p class="text-center text-sm leading-5 dark:text-white text-[#050505]">
+        © 2024. Права защищены
+      </p>
+    </div>
+  </footer>
+
+  <!-- footer end  -->
+
+  <script src="./js/app.js"></script>
+  <script>
+    document.querySelectorAll('.btn').forEach(function (button, index) {
+      button.addEventListener('click', function () {
+        document.querySelectorAll('.content').forEach(function (content) {
+          content.classList.remove('visibleTitle')
+          content.classList.add('hiddenTitle')
+        })
+        document
+          .querySelectorAll('.content')
+        [index].classList.remove('hiddenTitle')
+        document
+          .querySelectorAll('.content')
+        [index].classList.add('visibleTitle')
+      })
+    })
+
+    let activeBtn = document.querySelectorAll('#activeBtn')
+
+    activeBtn.forEach(function (item, index) {
+      item.addEventListener('click', function () {
+        activeBtn.forEach(function (title) {
+          title.classList.remove('active')
+        })
+        item.classList.add('active')
+      })
+    })
+  </script>
+</body>
+
+</html>

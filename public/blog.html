@@ -2,218 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdumajid doc</title>
+    <link rel="stylesheet" href="./public/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .scroll_hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        button {
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 
-<body class="dark:bg-[#050505] bg-white font-['Inter'] flex flex-col min-h-screen">
-    <!-- header start -->
-    <header class="py-7 md:py-8 lg:py-7">
-        <div class="max-w-[1240px] mx-auto px-5 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-[3px] text-[#050505] dark:text-white">
-                <span class="font-bold lg:text-2xl md:text-xl text-lg leading-6 md:leading-[28px]">zodiac</span>
-
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M1.28564 10.163L6.51575 10.2126C6.57834 10.2138 6.63961 10.2309 6.69382 10.2622C6.74804 10.2935 6.79343 10.338 6.82576 10.3916L9.48378 14.8962C9.52463 14.9644 9.58657 15.0174 9.66023 15.0472C9.73389 15.077 9.81525 15.082 9.892 15.0614C9.96875 15.0408 10.0367 14.9958 10.0856 14.9332C10.1345 14.8706 10.1616 14.7937 10.1629 14.7143L10.2125 9.48415C10.2137 9.42156 10.2308 9.36029 10.2621 9.30608C10.2934 9.25186 10.3379 9.20647 10.3915 9.17413L14.8961 6.51612C14.9643 6.47527 15.0173 6.41332 15.0471 6.33967C15.0769 6.26601 15.0819 6.18465 15.0613 6.1079C15.0407 6.03115 14.9957 5.96319 14.9331 5.9143C14.8705 5.86541 14.7936 5.83826 14.7142 5.83696L9.48404 5.78736C9.42145 5.78616 9.36019 5.76911 9.30597 5.73781C9.25176 5.70651 9.20636 5.66198 9.17403 5.60837L6.51602 1.10376C6.47517 1.03561 6.41322 0.982625 6.33957 0.952823C6.26591 0.92302 6.18455 0.918024 6.1078 0.938589C6.03105 0.959154 5.96309 1.00416 5.9142 1.0668C5.86531 1.12944 5.83816 1.2063 5.83685 1.28574L5.78725 6.51585C5.78606 6.57844 5.76901 6.63971 5.73771 6.69392C5.70641 6.74814 5.66187 6.79354 5.60827 6.82587L1.10366 9.48388C1.03551 9.52473 0.982523 9.58668 0.95272 9.66033C0.922918 9.73399 0.917921 9.81535 0.938486 9.8921C0.959051 9.96885 1.00406 10.0368 1.0667 10.0857C1.12933 10.1346 1.20619 10.1617 1.28564 10.163Z"
-                        fill="currentColor" stroke="#050505" stroke-width="0.125" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </a>
-            <ul class="hidden md:flex gap-6 lg:gap-11">
-                <li>
-                    <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
-                        href="#">Главная</a>
-                </li>
-                <li>
-                    <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
-                        href="#">Прогнозы</a>
-                </li>
-                <li>
-                    <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
-                        href="#">Совместимость</a>
-                </li>
-                <li>
-                    <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
-                        href="#">Нумерология</a>
-                </li>
-                <li>
-                    <a class="font-semibold md:text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
-                        href="#">Блог</a>
-                </li>
-            </ul>
-
-            <a href="#"
-                class="hidden md:block dark:bg-white bg-[#050505] hover:opacity-80 rounded-lg font-semibold md:text-xs lg:text-base leading-[14px] lg:leading-6 dark:text-[#050505] text-white py-3 px-4">Подписаться</a>
-
-            <button class="flex md:hidden cursor-pointer">
-                <svg class="text-[#DFDFDF] dark:text-white" width="24" height="14" viewBox="0 0 24 14"
-                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 1H24M0 7H24M0 13H24" stroke="currentColor" stroke-width="2" />
-                </svg>
-            </button>
-        </div>
-    </header>
-    <!-- header end -->
-
-   
-  
-    <!-- search start -->
-    <section class="py-[60px]">
-        <div class="max-w-[1240px] mx-auto px-5 text-center">
+<body class="dark:bg-[#050505] bg-white">
+    <section class="md:pt-7 md:pb-14 py-7">
+        <div class="max-w-[1232px] px-4 mx-auto">
             <h1
-                class="font-bold lg:text-6xl md:text-5xl text-2xl lg:leading-[72px] md:leading-[57.6px]  leading-[28.8px] dark:text-white text-[#050505] lg:mb-[60px] md:mb-11 mb-6">
-                Ищите то, что вас интересует</h1>
-            <form class="flex justify-center mb-6">
-                <input required
-                    class="max-w-[773px] w-full dark:bg-[#050505] font-medium md:text-2xl text-xs leading-[28.8px] text-[#050505] placeholder:text-[#99999999] border-2 dark:border-white border-[#050505] rounded-xl lg:py-6 md:py-[20px] lg:pl-6 md:pl-[18px] py-[17px] pl-4"
-                    placeholder="Например, нумерология чисел" type="text">
-                    <img class="ml-[-55px]"
-                    src="./img/blog/search-btn.svg" alt="">
+                class="font-bold text-2xl text-center text-[#050505] dark:text-white mb-6 leading-7 md:text-5xl md:leading-[57px] md:mb-9 lg:leading-[72px] lg:text-6xl lg:mb-14">
+                Ищите то, что вас интересует
+            </h1>
+            <div class="flex md:gap-4 items-center max-w-[996px] mx-auto mb-6">
+                <form
+                    class="flex w-full items-center gap-2 lg:py-5 lg:px-6 border-2 border-black dark:border-white rounded-xl md:py-4 md:px-[18px] px-4 py-3">
+                    <input type="search"
+                        class="outline-none w-full md:text-2xl md:leading-7 bg-white dark:bg-[#050505] dark:text-white"
+                        placeholder="Например, нумерология чисел">
+                    <button class="md:w-9 md:h-9 w-6 h-6 flex items-center justify-center">
+                        <svg class="dark:text-white text-[#050505]" width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M25.3395 25.88L29.9595 30.5M28.5 17.75C28.5 20.7337 27.3147 23.5952 25.205 25.705C23.0952 27.8147 20.2337 29 17.25 29C14.2663 29 11.4048 27.8147 9.29505 25.705C7.18526 23.5952 6 20.7337 6 17.75C6 14.7663 7.18526 11.9048 9.29505 9.79505C11.4048 7.68526 14.2663 6.5 17.25 6.5C20.2337 6.5 23.0952 7.68526 25.205 9.79505C27.3147 11.9048 28.5 14.7663 28.5 17.75Z"
+                                stroke="currentColor" dark:stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </form>
                 <button
-                    class="dark:bg-white  bg-[#050505] hover:opacity-80 lg:flex md:flex hidden  font-semibold text-2xl leading-[28.8px] dark:text-[#050505] text-white  rounded-xl border-2 hover:border-[#050505]  ml-[25px] lg:py-6 md:py-[20px] px-[66px]">Найти</button>
-            </form>
-            <div class="flex gap-4 justify-center">
-                <button
-                    class="dark:bg-[#050505]  lg:block md:block hidden hover:opacity-80 font-medium text-lg leading-6 dark:border-white dark:text-white text-[#050505] border-2  border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4">Астрология</button>
-                <button
-                    class="dark:bg-[#050505]  lg:block md:block hidden hover:opacity-80 font-medium text-lg leading-6 dark:border-white dark:text-white text-[#050505] border-2  border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4">Нумерология</button>
-                <button
-                    class="dark:bg-[#050505]  lg:block md:block hidden hover:opacity-80 font-medium text-lg leading-6 dark:border-white dark:text-white text-[#050505] border-2  border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4">Совместимость</button>
-                <button
-                    class="dark:bg-[#050505]  lg:block md:block hidden hover:opacity-80 font-medium text-lg leading-6 dark:border-white dark:text-white text-[#050505] border-2  border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4">Таро</button>
-                <button
-                    class="dark:bg-[#050505]  lg:block md:block hidden hover:opacity-80 font-medium text-lg leading-6 dark:border-white dark:text-white text-[#050505] border-2  border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4">Гороскоп</button>
-
-                <div class="swiper mySwiper lg:hidden md:hidden flex">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><button
-                                class="hover:opacity-80 font-medium text-lg leading-6 hover:text-white text-[#050505] border-2 hover:border-white border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4 py-2 px-3">Астрология</button>
-                        </div>
-                        <div class="swiper-slide"><button
-                                class="hover:opacity-80 font-medium text-lg leading-6 hover:text-white text-[#050505] border-2 hover:border-white border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4 py-2 px-3">Нумерология</button>
-                        </div>
-                        <div class="swiper-slide"> <button
-                                class="hover:opacity-80 font-medium text-lg leading-6 hover:text-white text-[#050505] border-2 hover:border-white border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4 py-2 px-3">Совместимость</button>
-                        </div>
-                        <div class="swiper-slide"> <button
-                                class="hover:opacity-80 font-medium text-lg leading-6 hover:text-white text-[#050505] border-2 hover:border-white border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4 py-2 px-3">Таро</button>
-                        </div>
-                        <div class="swiper-slide"> <button
-                                class="hover:opacity-80 font-medium text-lg leading-6 hover:text-white text-[#050505] border-2 hover:border-white border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4 py-2 px-3">Гороскоп</button>
-                        </div>
-                    </div>
-                </div>
+                    class="bg-[#050505] dark:bg-white lg:py-6 md:px-[66px] md:py-5 md:block rounded-xl font-semibold text-white dark:text-black text-2xl leading-7 hidden">Найти</button>
             </div>
-            <div>
-                <div class="bg-[#EEEEEE] flex text-left align-start rounded-3xl lg:mt-[60px] md:mt-[42px] mt-[36px] lg:pl-[60px] md:pl-[36px] lg:pb-[60px]  pl-6 pb-6 md:pb-[36px]">
-                    <div class="lg:pt-[332px] md:pt-[262px] pt-[252px]">
-                        <h4 class="lg:max-w-[756px] md:max-w-[578px] max-w-[287px] font-bold lg:text-5xl md:text-4xl text-lg  lg:leading-[57.6px] md:leading-[43px] leading-[21px] lg:mb-6 md:mb-4 mb-0">Таинства Зодиака: как знаки влияют на вашу личность</h4>
-                        <p class="lg:max-w-[774px] max-w-[534px] lg:block md:block hidden font-medium lg:text-[28px] md:text-lg leading-[38.08px]">Узнайте, как астрология влияет на ваши личные качества, поведение и привычки</p>
-                    </div>
-                    <div class="lg:pt-12 md:pt-9 lg:pr-12 md:pr-9 pt-6 pr-6 ml-auto">
-                        <button
-                            class="block hover:opacity-80 font-medium lg:text-lg md:text-sm
-                             leading-6 hover:text-white text-[#050505] border-2 hover:border-white border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4 py-2 px-3">Астрология</button>
-                    </div>
+            <div
+                class="flex items-center md:mb-10 mb-9 lg:mb-14 overflow-auto sm:justify-center gap-1.5 md:gap-3 lg:gap-4 max-w-[832px] px-4 md:mx-auto scroll_hide">
+                <button
+                    class="lg:px-6 lg:py-4 md:px-4 md:py-3 py-2 px-3 text-[#050505] dark:text-white lg:text-[18px] md:text-[14px] text-[10px] leading-3 md:leading-6 border-black dark:border-white border-2 md:rounded-xl rounded-md font-medium">
+                    Астрология
+                </button>
+                <button
+                    class="lg:px-6 lg:py-4 md:px-4 md:py-3 py-2 px-3 text-[#050505] dark:text-white lg:text-[18px] md:text-[14px] text-[10px] leading-3 md:leading-6 border-black dark:border-white border-2 md:rounded-xl rounded-md font-medium">
+                    Нумерология
+                </button>
+                <button
+                    class="lg:px-6 lg:py-4 md:px-4 md:py-3 py-2 px-3 text-[#050505] dark:text-white lg:text-[18px] md:text-[14px] text-[10px] leading-3 md:leading-6 border-black dark:border-white border-2 md:rounded-xl rounded-md font-medium">
+                    Совместимость
+                </button>
+                <button
+                    class="lg:px-6 lg:py-4 md:px-4 md:py-3 py-2 px-3 text-[#050505] dark:text-white lg:text-[18px] md:text-[14px] text-[10px] leading-3 md:leading-6 border-black dark:border-white border-2 md:rounded-xl rounded-md font-medium">
+                    Таро
+                </button>
+                <button
+                    class="lg:px-6 lg:py-4 md:px-4 md:py-3 py-2 px-3 text-[#050505] dark:text-white lg:text-[18px] md:text-[14px] text-[10px] leading-3 md:leading-6 border-black dark:border-white border-2 md:rounded-xl rounded-md font-medium">
+                    Гороскоп
+                </button>
+            </div>
+            <div class="flex flex-col lg:gap-10 md:gap-9 gap-6 w-full">
+                <div class="w-full bg-[#EEEEEE] ] rounded-3xl lg:pt-12 lg:pl-14 lg:pr-12 lg:pb-14 md:p-9 p-6">
+                    <button
+                        class="lg:px-6 lg:py-4 md:px-4 md:py-3 py-2 px-3 text-[#050505]  lg:text-[18px] md:text-[14px] text-[10px] leading-3 md:leading-6 border-black  border-2 md:rounded-xl rounded-md font-medium lg:mb-[218px] md:mb-[183px] mb-[198px] ml-auto block">
+                        Астрология
+                    </button>
+                    <h3
+                        class="lg:mb-6 md:mb-4 mb-0 font-bold text-[18px] text-[#050505]  md:text-4xl md:leading-[43px] lg:text-5xl lg:leading-[57px] max-w-[287px] lg:max-w-[756px] md:max-w-[578px]">
+                        Таинства Зодиака: как знаки влияют на вашу личность
+                    </h3>
+                    <p
+                        class="lg:max-w-[744px] lg:text-3xl font-medium text-[#050505]  text-[18px] leading-6 md:block hidden max-w-[534px]">
+                        Узнайте, как астрология влияет на ваши личные качества, поведение и привычки
+                    </p>
                 </div>
-                <div class="bg-[#EEEEEE] flex text-left align-start rounded-3xl lg:mt-[42px] md:mt-9 mt-6 lg:pl-[60px] md:pl-[36px] lg:pb-[60px] md:pb-[36px] pl-6 pb-6 ">
-                    <div class="lg:pt-[332px] md:pt-[262px] pt-[252px]">
-                        <h4 class="lg:max-w-[756px] md:max-w-[578px] max-w-[287px] font-bold lg:text-5xl md:text-4xl text-lg  lg:leading-[57.6px] md:leading-[43px] leading-[21px] lg:mb-6 md:mb-4 mb-0">Нумерология: Числа, Которые Указывают на Ваш Путь</h4>
-                        <p class="lg:max-w-[774px] max-w-[534px] lg:block md:block hidden font-medium lg:text-[28px] md:text-lg leading-[38.08px]">Научитесь вычислять ваши жизненные числа и узнайте, как они влияют на вашу жизнь</p>
-                    </div>
-                    <div class="lg:pt-12 md:pt-9 lg:pr-12 md:pr-9 pt-6 pr-6 ml-auto">
-                        <button
-                            class="block hover:opacity-80 font-medium lg:text-lg md:text-sm
-                             leading-6 hover:text-white text-[#050505] border-2 hover:border-white border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4 py-2 px-3">Нумерология</button>
-                    </div>
+                <div class="w-full bg-[#EEEEEE] ] rounded-3xl lg:pt-12 lg:pl-14 lg:pr-12 lg:pb-14 md:p-9 p-6">
+                    <button
+                        class="lg:px-6 lg:py-4 md:px-4 md:py-3 py-2 px-3 text-[#050505]  lg:text-[18px] md:text-[14px] text-[10px] leading-3 md:leading-6 border-black  border-2 md:rounded-xl rounded-md font-medium lg:mb-[218px] md:mb-[183px] mb-[198px] ml-auto block">
+                        Нумерология
+                    </button>
+                    <h3
+                        class="lg:mb-6 md:mb-4 mb-0 font-bold text-[18px] text-[#050505]  md:text-4xl md:leading-[43px] lg:text-5xl lg:leading-[57px] max-w-[287px] lg:max-w-[756px] md:max-w-[578px]">
+                        Нумерология: Числа, Которые Указывают на Ваш Путь
+                    </h3>
+                    <p
+                        class="lg:max-w-[744px] lg:text-3xl font-medium text-[#050505]  text-[18px] leading-6 md:block hidden max-w-[534px]">
+                        Научитесь вычислять ваши жизненные числа
+                        и узнайте, как они влияют на вашу жизнь
+                    </p>
                 </div>
-                <div class="bg-[#EEEEEE] flex text-left align-start rounded-3xl lg:mt-[42px] md:mt-9 mt-6 lg:pl-[60px] md:pl-[36px] lg:pb-[60px] md:pb-[36px] pl-6 pb-6 ">
-                    <div class="lg:pt-[332px] md:pt-[262px] pt-[252px]">
-                        <h4 class="lg:max-w-[756px] md:max-w-[578px] max-w-[287px] font-bold lg:text-5xl md:text-4xl text-lg  lg:leading-[57.6px] md:leading-[43px] leading-[21px] lg:mb-6 md:mb-4 mb-0">Зодиакальная Совместимость: Найдите Идеальную Пару</h4>
-                        <p class="lg:max-w-[774px] max-w-[534px] lg:block md:block hidden font-medium lg:text-[28px] md:text-lg leading-[38.08px]">Узнайте, как астрология помогает в выборе партнера для построения гармоничных отношений</p>
-                    </div>
-                    <div class="lg:pt-12 md:pt-9 lg:pr-12 md:pr-9 pt-6 pr-6 ml-auto">
-                        <button
-                            class="block hover:opacity-80 font-medium lg:text-lg md:text-sm
-                             leading-6 hover:text-white text-[#050505] border-2 hover:border-white border-[#050505] rounded-xl lg:py-4 lg:px-6 md:py-3 md:px-4 py-2 px-3">Совместимость</button>
-                    </div>
+                <div class="w-full bg-[#EEEEEE] ] rounded-3xl lg:pt-12 lg:pl-14 lg:pr-12 lg:pb-14 md:p-9 p-6">
+                    <button
+                        class="lg:px-6 lg:py-4 md:px-4 md:py-3 py-2 px-3 text-[#050505]  lg:text-[18px] md:text-[14px] text-[10px] leading-3 md:leading-6 border-black  border-2 md:rounded-xl rounded-md font-medium lg:mb-[218px] md:mb-[183px] mb-[198px] ml-auto block">
+                        Совместимость
+                    </button>
+                    <h3
+                        class="lg:mb-6 md:mb-4 mb-0 font-bold text-[18px] text-[#050505]  md:text-4xl md:leading-[43px] lg:text-5xl lg:leading-[57px] max-w-[287px] lg:max-w-[756px] md:max-w-[578px]">
+                        Совместимость: Найдите Своего Идеального Партнёра
+                    </h3>
+                    <p
+                        class="lg:max-w-[744px] lg:text-3xl font-medium text-[#050505]  text-[18px] leading-6 md:block hidden max-w-[534px]">
+                        Узнайте, как ваш знак и число рождения
+                        влияют на отношения с другими людьми
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- search end -->
 
-    <!-- footer start -->
-    <footer
-        class="border-t-2 dark:border-[#FFFFFF3D] border-[#0505053D] pt-7 md:pt-[50px] lg:pt-[60px] lg:pb-[78px] pb-[60px] mt-auto">
-        <div class="max-w-[1240px] mx-auto px-5">
-            <div class="flex items-start md:items-center justify-between mb-9 md:mb-5 lg:mb-[42px]">
-                <a href="#" class="flex items-center gap-[3px] text-[#050505] dark:text-white">
-                    <span class="font-bold lg:text-2xl md:text-xl text-lg leading-6 md:leading-[28px]">zodiac</span>
-
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M1.28564 10.163L6.51575 10.2126C6.57834 10.2138 6.63961 10.2309 6.69382 10.2622C6.74804 10.2935 6.79343 10.338 6.82576 10.3916L9.48378 14.8962C9.52463 14.9644 9.58657 15.0174 9.66023 15.0472C9.73389 15.077 9.81525 15.082 9.892 15.0614C9.96875 15.0408 10.0367 14.9958 10.0856 14.9332C10.1345 14.8706 10.1616 14.7937 10.1629 14.7143L10.2125 9.48415C10.2137 9.42156 10.2308 9.36029 10.2621 9.30608C10.2934 9.25186 10.3379 9.20647 10.3915 9.17413L14.8961 6.51612C14.9643 6.47527 15.0173 6.41332 15.0471 6.33967C15.0769 6.26601 15.0819 6.18465 15.0613 6.1079C15.0407 6.03115 14.9957 5.96319 14.9331 5.9143C14.8705 5.86541 14.7936 5.83826 14.7142 5.83696L9.48404 5.78736C9.42145 5.78616 9.36019 5.76911 9.30597 5.73781C9.25176 5.70651 9.20636 5.66198 9.17403 5.60837L6.51602 1.10376C6.47517 1.03561 6.41322 0.982625 6.33957 0.952823C6.26591 0.92302 6.18455 0.918024 6.1078 0.938589C6.03105 0.959154 5.96309 1.00416 5.9142 1.0668C5.86531 1.12944 5.83816 1.2063 5.83685 1.28574L5.78725 6.51585C5.78606 6.57844 5.76901 6.63971 5.73771 6.69392C5.70641 6.74814 5.66187 6.79354 5.60827 6.82587L1.10366 9.48388C1.03551 9.52473 0.982523 9.58668 0.95272 9.66033C0.922918 9.73399 0.917921 9.81535 0.938486 9.8921C0.959051 9.96885 1.00406 10.0368 1.0667 10.0857C1.12933 10.1346 1.20619 10.1617 1.28564 10.163Z"
-                            fill="currentColor" stroke="#050505" stroke-width="0.125" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </a>
-
-                <ul
-                    class="flex flex-col md:flex-row gap-3 md:gap-6 lg:gap-11 mb-auto lg:translate-y-0 md:-translate-y-full">
-                    <li>
-                        <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
-                            href="#">Главная</a>
-                    </li>
-                    <li>
-                        <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
-                            href="#">Прогнозы</a>
-                    </li>
-                    <li>
-                        <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
-                            href="#">Совместимость</a>
-                    </li>
-                    <li>
-                        <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
-                            href="#">Нумерология</a>
-                    </li>
-                    <li>
-                        <a class="font-semibold text-xs lg:text-base leading-5 dark:text-[#DFDFDF] text-[#050505] hover:opacity-80"
-                            href="#">Блог</a>
-                    </li>
-                </ul>
-
-                <a href="#"
-                    class="block dark:bg-white bg-[#050505] hover:opacity-80 rounded-lg font-semibold text-xs lg:text-base leading-[14px] lg:leading-6 dark:text-[#050505] text-white py-3 px-4">Подписаться</a>
-            </div>
-            <div class="flex justify-center items-center mb-[42px] md:mb-[60px] lg:mb-[120px]">
-                <select id="theme-selector"
-                    class="max-w-[131px] md:max-w-[162px] block w-full p-3 lg:px-4 lg:p-3 mb-6 text-[#121212] border rounded-lg bg-white cursor-pointer border-[#0505053D] font-semibold text-xs lg:text-base leading-5">
-                    <option value="light">Светлая тема</option>
-                    <option value="dark">Темная тема</option>
-                </select>
-            </div>
-
-            <p class="text-center text-sm leading-5 dark:text-white text-[#050505]">
-                © 2024. Права защищены
-            </p>
-        </div>
-    </footer>
-
-    <!-- footer end  -->
-
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-    <script src="./js/app.js"></script>
 </body>
 
 </html>
